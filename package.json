@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon src/index"
+    "start": "src/index",
+    "start:dev": "nodemon src/index"
   },
   "dependencies": {
     "apollo-datasource-rest": "^3.6.1",
