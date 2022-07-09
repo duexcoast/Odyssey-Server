@@ -8,6 +8,9 @@ export const resolvers = {
     track: (_, { id }, { dataSources }) => {
       return dataSources.trackAPI.getTrack(id);
     },
+    module: (_, { id }, { dataSources }) => {
+      return dataSources.trackAPI.getModuleById(id);
+    },
   },
   Mutation: {
     incrementTrackViews: async (_, { id }, { dataSources }) => {

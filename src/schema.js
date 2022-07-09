@@ -6,6 +6,8 @@ const typeDefs = gql`
     tracksForHome: [Track!]!
     "Return a specific track by id"
     track(id: ID!): Track
+    "Return a specific module by id"
+    module(id: ID!): Module
   }
 
   type Mutation {
@@ -39,6 +41,10 @@ const typeDefs = gql`
     id: ID!
     "The module's title"
     title: String!
+    "The module's content"
+    content: String!
+    "URL for this module's video content"
+    videoUrl: String!
     "Length of module, in seconds"
     length: Int @deprecated(reason: "use durationInSeconds")
     "The module's video duration, in seconds"
